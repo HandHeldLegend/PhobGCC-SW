@@ -17,6 +17,19 @@ volatile uint8_t _pleaseCommit = 0;//255 = redraw please
 int _currentCalStep = -1;//-1 means not calibrating
 DataCapture _dataCapture;
 
+Buttons _btn;
+Buttons _hardware;
+RawStick _raw;
+StickParams _aStickParams;
+StickParams _cStickParams;
+//ADC reference values for Phob 1.0
+float _ADCScale = 1;
+float _ADCScaleFactor = 1;
+
+int _rumblePower = 0;
+
+float _dT;
+
 //This gets called by the comms library
 GCReport __no_inline_not_in_flash_func(buttonsToGCReport)() {
 	GCReport report = {
@@ -346,12 +359,16 @@ int main() {
 		const int version = SW_VERSION;
 #endif //BUILD_DEV
 		videoOut(_pinDac0, _btn, _hardware, _raw, _controls, _aStickParams, _cStickParams, _dataCapture, _sync, _pleaseCommit, _currentCalStep, version);
-	} else {
-		enterMode(_pinTX,
+	} 
+	else 
+	{
+		start_usb_mode(PUSB_MODE_NS);
+
+		/*enterMode(_pinTX,
 				_pinRumble,
 				_pinBrake,
 				_rumblePower,
-				buttonsToGCReport);
+				buttonsToGCReport);*/
 	}
 
 }

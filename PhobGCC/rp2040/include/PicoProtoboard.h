@@ -5,6 +5,8 @@
 #define CLEANADC
 #endif //CLEANADC
 
+#include "phob_usb.h"
+
 //defining which pin is what
 //GPIO
 //TODO: these are all temporary

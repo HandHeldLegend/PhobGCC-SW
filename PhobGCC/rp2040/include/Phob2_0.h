@@ -9,6 +9,8 @@
 #define CLEANADC
 #endif //CLEANADC
 
+#include "phob_usb.h"
+
 //defining which pin is what
 //GPIO
 const int _pinA  = 17;

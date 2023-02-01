@@ -22,6 +22,7 @@ add_executable(phobgcc_rp2040
 	src/main.cpp
 	src/navigateMenu.cpp
 	src/storage.cpp
+	src/phob_usb.cpp
 	)
 
 pico_generate_pio_header(phobgcc_rp2040 ${CMAKE_CURRENT_LIST_DIR}/pio/joybus.pio)
@@ -57,7 +58,9 @@ target_link_libraries(phobgcc_rp2040
 	hardware_pwm
 	hardware_spi
 	hardware_sync
-	hardware_timer)
+	hardware_timer
+	tinyusb_device
+	tinyusb_board)
 
 pico_add_extra_outputs(phobgcc_rp2040)
-pico_enable_stdio_usb(phobgcc_rp2040 1)
+#pico_enable_stdio_usb(phobgcc_rp2040 1)
