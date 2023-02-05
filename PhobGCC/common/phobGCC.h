@@ -20,7 +20,6 @@ using std::max;
 //#include "../rp2040/include/PicoProtoboard.h"    // For a protoboard with a Pico on it, used for developing for the RP2040
 #include "../rp2040/include/Phob2_0.h"           // For PhobGCC Board 2.0 with RP2040
 
-#include "phob_usb_types.h"
 #include "structsAndEnums.h"
 #include "variables.h"
 #include "filter.h"

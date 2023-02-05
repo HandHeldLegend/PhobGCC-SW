@@ -5,6 +5,7 @@
 #define CLEANADC
 #endif //CLEANADC
 
+#include "phob_usb_types.h"
 #include "phob_usb.h"
 
 //defining which pin is what

@@ -1,0 +1,6 @@
+#ifndef PHOB_SETTINGS_UTIL_LL_H
+#define PHOB_SETTINGS_UTIL_LL_H
+
+
+
+#endif
